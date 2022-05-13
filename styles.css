@@ -48,3 +48,14 @@ body {
 	font-weight: 500;
 	font-style: italic;
 }
+
+/* Media query: tablet or smaller */
+@media screen and (max-width: 1000px) {
+	.quote-container {
+		margin: auto 10px;
+	}
+
+	.quote-text {
+		font-size: 2.25rem;
+	}
+}
