@@ -1,0 +1,10 @@
+html {
+	/* Prevent to add horizontal scroll bars 
+	on the site when adding padding to any element */
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+}
