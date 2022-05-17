@@ -12,8 +12,13 @@ let apiQuotes = [];
 function newQuote() {
 	// Pick a random quote from API Quotes array.
 	const QUOTE = apiQuotes[Math.floor(Math.random() * apiQuotes.length)]
+	// Check if author field is blank or null and replace it with 'Unkwown'.
+	if(!QUOTE.author) {
+		AUTHOR_TEXT.textContent = 'Unkwown';
+	} else {
+		AUTHOR_TEXT.textContent = QUOTE.author;
+	}
 	// Add quote text and author to the page dynamically.
-	AUTHOR_TEXT.textContent = QUOTE.author;
 	QUOTE_TEXT.textContent = QUOTE.text;
 }
 
