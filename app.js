@@ -39,5 +39,17 @@ async function getQuotes() {
 	newQuote();
 }
 
+// Tweet a quote.
+function tweetQuote() {
+	const TWITTER_URL = `https://twitter.com/intent/tweet?text="${QUOTE_TEXT.textContent}" — ${AUTHOR_TEXT.textContent}`;
+	window.open(TWITTER_URL, '_blank');
+}
+
+// Event listeners.
+// Load a new quote when you press the new quote button.
+NEW_QUOTE_BTN.addEventListener('click', newQuote);
+// Tweet the current quote when you press the tweet button.
+TWITTER_BTN.addEventListener('click', tweetQuote);
+
 // On load.
 getQuotes();
